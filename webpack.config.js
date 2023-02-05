@@ -12,13 +12,25 @@
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Development',
+      template: "src/index.html",
     }),
   ],
     output: {
       filename: 'main.js',
       path: path.resolve(__dirname, 'dist'),
       clean: true,
+      assetModuleFilename: "[name][ext]",
     },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'dist'),
+    },
+    port: 3000,
+    open: true,
+    hot: true,
+    compress: true,
+    historyApiFallback: true,
+  },
     module: {
       rules: [
         {
