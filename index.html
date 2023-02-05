@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html><head><script defer src="main.js"></script></head>
-  <head>
-    <meta charset="utf-8">
-    <title>Development</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-   <body>
-    <div class="container">
-      <header>
-        Santi
-      </header>
-      <main>
-        <div class="proyects">
-
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Todo List</title>
+        <meta name="viewport" content="width=1024">
+        <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script></head>
+    <body>
+        <div id="container">
+            <nav>
+                 <div id="inbox-today-block">
+                    <button  id="inbox">
+                        Principal
+                    </button>
+                    <button id="today">
+                       Para Hoy
+                    </button>
+                 </div>
+                 <div id="projects-block">
+                    <div id="projects-title">Proyectos</div>
+                    <button id="add-project">+ Añadir proyecto</button>
+                 </div>
+            </nav>
+            <div id="todo-panel">
+                <div id="add-todo">
+                    <button id="add-todo-button">+ Añadir tarea</button>
+                </div>
+                
+            </div>
         </div>
-        <div class="todos">
-
-        </div>
-      </main>
-      <footer>
-
-      </footer>
-    </div>
-  </body>
+        <script src="main.js" async defer></script>
+    </body>
 </html>
