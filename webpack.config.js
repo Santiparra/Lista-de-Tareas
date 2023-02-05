@@ -1,5 +1,7 @@
  const path = require('path');
  const HtmlWebpackPlugin = require('html-webpack-plugin');
+ const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 
  module.exports = {
@@ -9,13 +11,7 @@
    devServer: {
     static: './dist',
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Development',
-      template: "src/index.html",
-    }),
-  ],
-    output: {
+   output: {
       filename: 'main.js',
       path: path.resolve(__dirname, 'dist'),
       clean: true,
@@ -34,8 +30,8 @@
     module: {
       rules: [
         {
-          test: /\.css$/i,
-          use: ['style-loader', 'css-loader'],
+          test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -47,4 +43,13 @@
         },
       ],
     },
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: 'Development',
+        template: "src/index.html",
+      }),
+      new BundleAnalyzerPlugin(),
+    ],
+  
+  
   };

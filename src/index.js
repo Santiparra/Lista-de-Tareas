@@ -1,4 +1,4 @@
-import './main.css';
+import './main.scss';
 /* import Icon from './icon.png'; */
  // Add the image to our existing div.
 /*  const myIcon = new Image();
