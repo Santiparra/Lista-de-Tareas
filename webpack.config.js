@@ -34,7 +34,7 @@
         use: ['style-loader', 'css-loader', 'sass-loader'],
         },
         {
-          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          test: /\.(png|svg|gif)$/i,
           type: 'asset/resource',
         },
         {
